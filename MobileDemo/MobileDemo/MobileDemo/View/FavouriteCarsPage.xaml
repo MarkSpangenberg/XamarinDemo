@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileDemo.View.FavouriteCarsPage"
+             xmlns:dataGrid="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.2">
+    <ContentPage.Content>
+        <StackLayout>
+            <dataGrid:GridControl x:Name="grid" ItemsSource="{Binding Cars}"
+                              NewItemRowVisibility="True">
+            </dataGrid:GridControl>
+            <Button Text="Update" Clicked="UpdateButton_OnClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
