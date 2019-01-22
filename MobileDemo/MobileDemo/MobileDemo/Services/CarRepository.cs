@@ -115,17 +115,8 @@ namespace MobileDemo.Services
                 }
                 catch (AggregateException ae)
                 {
-                    foreach (Exception e in ae.Flatten().InnerExceptions)
-                    {
-                        if (e is HttpRequestException)
-                        {
-                            throw e;
-                        }
-                        else
-                        {
-                            throw ae;
-                        }
-                    }
+                    //Empty catch to handle error thrown when server is not available.
+                    return null;
                 }
             }
 
